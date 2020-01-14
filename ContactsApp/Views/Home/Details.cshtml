@@ -1,0 +1,28 @@
+﻿@model Contacts
+<body>
+    <div class ="card-deck">
+        <div class="card m-3">
+            <div class="card-header">
+                <div style="width: 40% " >
+                    @Model.Name
+                </div>
+            </div>
+            <img style="width: 40% " class="card-img-top" src="~/images/noimage.jpg" />
+            <div  class="card-footer text-center">
+                <div style="width: 40% ">
+                    @foreach (var number in Model.Number)
+                    {
+                    <p><strong>Phone Number: </strong> @number </p> 
+                    }
+                </div>
+                <div style="width: 40% ">
+                    @foreach (var email in Model.Email)
+                    {
+                    <p><strong>Email: </strong> @email</p> 
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

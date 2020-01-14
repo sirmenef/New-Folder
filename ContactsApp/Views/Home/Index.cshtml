@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Contacts>
+
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <strong>Name</strong>
+                <hr />
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var contact in Model)
+            {
+                <tr>
+                <a href="#">
+                <td>@contact.Name</td>
+                </a>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
